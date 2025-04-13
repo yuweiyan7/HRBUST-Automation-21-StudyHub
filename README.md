@@ -13,6 +13,10 @@
 - 💰 **拒绝“资料贩子”收割同学**  
   过去我们也曾为了一份往年题全班合买，这倒还好。更有甚者，像我们学校的AA书店，居然会把十几年前的试卷P图改成最近年份，冒充新题贩卖，靠欺骗同学牟利。
   分享资料就是想打破这种不良循环，让资源回归本该属于它的地方。
+
+- **受到以下分享者启发**  
+  [东南大学自动化学院课程资料](https://github.com/JimmyChenkk/Southeast-University-School-of-Automation-and-Control-Science-course-resource)
+  [哈尔滨理工大学课程攻略](https://github.com/zcbgyks/HRBUST-Course/tree/main)
 ---
 
 ## 📁 资料内容
