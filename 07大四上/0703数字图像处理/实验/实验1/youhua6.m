@@ -1,0 +1,17 @@
+clear, clc, close all;
+grayl=double(imread('couple.bmp'));
+c1=255/log(256);
+c2=255/(exp(2.56)-1);
+result1=uint8(c1*log(grayl+1));
+result2=uint8((exp(grayl*0.01)-1)*c2);
+gamma1=0.35;gamma2=2;
+result3=grayl.^gamma1;
+result4=grayl.^gamma2;
+result3=result3/max(result3(:));
+result4=result4/max(result4(:));
+subplot(221),imshow(result1),title('对数变换');
+subplot(222),imshow(result2),title('指数变换');
+subplot(223),imshow(result3),title('幂变换r=0.35');
+subplot(224),imshow(result4),title('幂变换r=2');
+imwrite(result1,'116-5-1.jpg');
+imwrite(result2,'li6-5-2.jpg');

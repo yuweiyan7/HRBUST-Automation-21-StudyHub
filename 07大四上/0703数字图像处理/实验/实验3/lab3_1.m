@@ -1,0 +1,15 @@
+Image=im2double(imread("frose.jpg"));
+gray=rgb2gray(Image);
+H=fspecial("laplacian",0);
+R=imfilter(Image,H);
+edgeImage=abs(R);
+H1=[0 -1 0;-1 5 -1;0 -1 0];
+sharpImage=imfilter(Image,H1);
+BW=edge(gray,"zerocross",0.05,H);
+subplot(221),imshow(Image),title("原图像");
+subplot(222),imshow(edgeImage),title("Laplacian滤波图像");
+subplot(223),imshow(BW),title("Laplacian边缘检测");
+subplot(224),imshow(sharpImage),title("Laplacian锐化图像");
+imwrite(edgeImage,"li6-21-1.jpg");
+imwrite(BW,"li6-21-2.jpg");
+imwrite(sharpImage,"li6-21-3.jpg");
