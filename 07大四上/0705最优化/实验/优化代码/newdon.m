@@ -1,0 +1,20 @@
+syms x y
+f=2*(x-1)^2+5*(y-5)^2;
+v=[x,y]; 
+df=jacobian(f,v); 
+df=df.'; 
+G=jacobian(df,v); 
+epson=0.001;
+x0=[-2,4]';
+g1=subs(df,{x,y},{x0(1,1),x0(2,1)});
+G1=subs(G,{x,y},{x0(1,1),x0(2,1)});
+k=0;
+while(norm(g1)>epson) 
+    p=-G1\g1; 
+    x0=x0+p; 
+    g1=subs(df,{x,y},{x0(1,1),x0(2,1)}); 
+    G1=subs(G,{x,y},{x0(1,1),x0(2,1)}); 
+    k=k+1; 
+end; 
+k 
+x0
